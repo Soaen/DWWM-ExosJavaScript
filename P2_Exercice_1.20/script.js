@@ -1,6 +1,6 @@
 let tab =  [22, 4, -2, 0, 16, 6]
 let moved = false;
-let sorted = false;
+let sorted = true;
 
 console.log(tab);
 
@@ -15,21 +15,17 @@ console.log(tab);
 //     }
 // }
 
-
 // Tri à bulle
 do{
+    sorted = true
     for (let p = 0; p < tab.length; p++) {    
-
         if(tab[p] > tab[p + 1]){
             let tempVar = tab[p + 1]
             tab[p + 1] = tab[p]
             tab[p] = tempVar
-            moved = true
+            sorted = false
         }
     }
-    if(!moved)
-        sorted = true
-    moved = false
 } while(sorted === false)
 
 console.log(tab);
