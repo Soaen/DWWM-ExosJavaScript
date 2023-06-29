@@ -32,11 +32,6 @@ while(monnaie >= 5){
     console.log("5 Euros");
     monnaie = monnaie - 5
 }
-while(monnaie >= 2){
-
-    console.log("2 Euros");
-    monnaie = monnaie - 2
-}
 while(monnaie >= 1){
     console.log("1 Euros");
     monnaie = monnaie - 1
