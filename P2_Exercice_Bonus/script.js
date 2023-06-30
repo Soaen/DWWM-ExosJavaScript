@@ -14,7 +14,6 @@ do{
             max = med
             med = (max + min) / 2
             med = parseInt(med)
-    
         } else if(tab[med] < searchedNb){
             console.log(`Plus haut !`);
             min = med
@@ -29,6 +28,4 @@ do{
     }else{
         searchedNb = parseInt(prompt('Le chiffre entré n\'est pas disponible dans le tableau, veuillez réessayer.'))  
     }
-    
-
 }while(!isFound)

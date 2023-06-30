@@ -1,31 +1,26 @@
-let tab =  [22, 4, -2, 0, 16, 6]
-let moved = false;
-let sorted = true;
+let tabNotes = []
+let userValue;
+let nbGrandesNotes = 0
+let moyenne
 
-console.log(tab);
+for (let i = 0; i < 13; i++) {
+    userValue = parseInt(prompt("Entrez un nombre"))
+    tabNotes.push(userValue)
+}
 
-//Tri par sélection
-// for (let i = 0; i < tab.length; i++) {
-//     for (let n = i + 1; n < tab.length; n++) {
-//         if(tab[n] > tab[i]){
-//             let tempVar = tab[i]
-//             tab[i] = tab[n]
-//             tab[n] = tempVar
-//         }
-//     }
-// }
+let somme = 0;
 
-// Tri à bulle
-do{
-    sorted = true
-    for (let p = 0; p < tab.length; p++) {    
-        if(tab[p] > tab[p + 1]){
-            let tempVar = tab[p + 1]
-            tab[p + 1] = tab[p]
-            tab[p] = tempVar
-            sorted = false
-        }
+for (let i = 0; i < tabNotes.length; i++) {
+    somme += tabNotes[i];
+}
+
+moyenne = somme / tabNotes.length
+
+for (let i = 0; i < tabNotes.length; i++) {
+    if (tabNotes[i] > moyenne) {
+        nbGrandesNotes++;
     }
-} while(sorted === false)
+    
+}
 
-console.log(tab);
+console.log("Le nombre de notes supérieures a la moyenne est de " + nbGrandesNotes);
