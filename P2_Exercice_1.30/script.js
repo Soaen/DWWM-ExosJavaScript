@@ -4,8 +4,6 @@ let sortedTab = [];
 let index1 = 0;
 let index2 = 0;
 
-
-
 while(index1 < firstTab.length && index2 < secondTab.length){
     if(firstTab[index1] <= secondTab[index2]){
         sortedTab.push(firstTab[index1]);
@@ -20,6 +18,5 @@ while(index1 < firstTab.length){
     sortedTab.push(firstTab[index1])
     index1++;
 }
-
 
 console.log(sortedTab);

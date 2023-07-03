@@ -9,7 +9,7 @@ while(nbReprographie != 0){
         nbRepro10++
         console.log('0.10');
     }else if(nbRepro9 < 20){
-        price += 0.09 
+        price += 0.09
         nbReprographie -= 1
         nbRepro9++
         console.log('0.09');
@@ -23,4 +23,4 @@ while(nbReprographie != 0){
 }
 
 
-console.log(price);
+console.log(price.toFixed(2));
