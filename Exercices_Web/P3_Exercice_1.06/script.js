@@ -27,10 +27,13 @@ liFourth.textContent = 'Green tea'
 let liFifth = document.createElement('li')
 liFifth.textContent = 'Milk'
 
+
+document.body.appendChild(h2First)
+document.body.appendChild(pFirst)
 document.body.appendChild(ulFirst)
 ulFirst.appendChild(liFirst)
 ulFirst.appendChild(liSecond)
-liFirst.appendChild(ulSecond)
+liSecond.appendChild(ulSecond)
 ulSecond.appendChild(liThird)
 ulSecond.appendChild(liFourth)
 ulFirst.appendChild(liFifth)
