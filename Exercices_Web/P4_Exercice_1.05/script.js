@@ -1,13 +1,8 @@
 let listSelection = document.getElementsByTagName('ul')
 let keyPressed = 0;
 
-for (let i = 0; i < listSelection.length; i++) {
-    listSelection[i].addEventListener("keydown", function(event) {
-        if (event.key === 'Enter') {
+document.addEventListener("keydown", function() {
+    if(keyPressed < listSelection.length)
         listSelection[keyPressed].style.backgroundColor = 'red';
-        console.log('test');
         keyPressed++;
-        }
-    })     
-    
-}
+})     
