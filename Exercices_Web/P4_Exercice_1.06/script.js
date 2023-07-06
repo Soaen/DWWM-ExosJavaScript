@@ -1,6 +1,5 @@
 let listSelection = document.getElementsByTagName('ul')
 
-
 for (let i = 0; i < listSelection.length; i++) {
     listSelection[i].addEventListener("click", function(e) {
         e.target.style.display = 'none';
