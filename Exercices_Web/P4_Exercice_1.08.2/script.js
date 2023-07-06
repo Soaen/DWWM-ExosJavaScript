@@ -3,10 +3,8 @@ const loginForm = document.getElementById("my-form")
 
 let tabForm = [];
 
-
-
 loginForm.addEventListener('submit', (e) => {
-    e.preventDefault()
+    e.preventDefault() //Empêche de submit le formulaire pour pouvoir executé le code
 
     let usernameForm = document.getElementById("name").value;
     let passwordForm = document.getElementById("pwd").value;
