@@ -29,8 +29,8 @@ function createForm(){
     inputSubmit.setAttribute('id', 'submit-btn')
     
     
-    for (var annee = 1980; annee <= 2023; annee++) {
-        var option = document.createElement("option");
+    for (let annee = 1980; annee <= 2023; annee++) {
+        let option = document.createElement("option");
         option.value = annee;
         option.text = annee;
         inputBirthDate.appendChild(option);
