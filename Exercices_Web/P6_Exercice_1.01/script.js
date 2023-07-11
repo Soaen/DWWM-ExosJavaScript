@@ -10,7 +10,7 @@ async function loadCategories() {
             let selectOnHtml = document.getElementById('filter')
 
             let optionsCreation = document.createElement('option')
-            optionsCreation.setAttribute('valute', datas.categories[i])
+            optionsCreation.setAttribute('value', datas.categories[i])
             optionsCreation.textContent = datas.categories[i]
 
             selectOnHtml.appendChild(optionsCreation)
