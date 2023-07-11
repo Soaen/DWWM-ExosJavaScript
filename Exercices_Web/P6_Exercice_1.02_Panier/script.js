@@ -68,8 +68,7 @@ function createArticle(datas){
 function add(e){
     let quantityText = document.getElementById(`quantity-article${e}`);
     let totalPriceText = document.getElementById(`p-totalPrice`);
-  console.log(allDatas);
-  console.log(e);
+
     allDatas[e].quantity = allDatas[e].quantity + 1;
     totalPriceNb = totalPriceNb + parseInt(allDatas[e].price);
   
