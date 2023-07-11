@@ -1,4 +1,3 @@
-const linkApi = 'https://api.publicapis.org/'
 const linkCateApi = 'https://api.publicapis.org/categories'
 const linkEntriesApi = 'https://api.publicapis.org/entries'
 
@@ -63,14 +62,13 @@ async function loadEntries(filter) {
                 createTr.append(createNameTh, createDescTh, createAuthTh, createHTTPSTh, createCorsTh, createLinkTh, createCategoryTh)
     
                 selectNameOnHtml.appendChild(createTr)
-            }
-
-            
+            }   
         }
-
+    })
+    .catch(error => {
+        throw(error);
     })
 }
-
 
 loadCategories()
 
