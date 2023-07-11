@@ -42,12 +42,8 @@ for (let i = 0; i < items.length; i++) {
 
     divArticle.append(nameArticle, priceArticle, quantityArticle, btnArticle)
 
-
     document.body.appendChild(divArticle)
 }
-
-
-
 
 let totalPrice = document.createElement("p")
 
@@ -55,10 +51,7 @@ totalPrice.setAttribute('id', 'p-totalPrice')
 
 totalPrice.textContent = `Montant total : ${totalPriceNb}€`
 
-
 document.body.appendChild(totalPrice)
-
-
 
 function add(e){
     let quantityText = document.getElementById(`quantity-article${e}`)
