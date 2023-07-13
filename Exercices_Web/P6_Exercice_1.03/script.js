@@ -36,12 +36,12 @@ async function loadMessages() {
         for (let i = 0; i < datas.length; i++) {
             
             let contentArticle = document.createElement('article')
-            contentArticle.style.marginLeft = '15px'
+            contentArticle.style.marginLeft = '10px'
 
             let paraPseudo = document.createElement('p')
             paraPseudo.innerHTML = `${datas[i].pseudo} &agrave; ${datas[i].date}`
             paraPseudo.style.margin = '0px'
-            paraPseudo.style.marginTop = '15px'
+            paraPseudo.style.marginTop = '8px'
             paraPseudo.style.color = 'darkgrey'
             paraPseudo.style.fontSize = '10px'
 
@@ -54,6 +54,7 @@ async function loadMessages() {
             paraMsgDiv.style.paddingLeft = '10px'
             paraMsgDiv.style.marginTop = '5px'
             paraMsgDiv.style.marginRight = '10px'
+            paraMsgDiv.style.marginBottom = '8px'
 
             let paraMessage = document.createElement('p')
             paraMessage.innerHTML = datas[i].message
@@ -80,7 +81,6 @@ async function loadMessages() {
 
         let formMessageAsk = document.createElement('input')
             formMessageAsk.style.width = '70%'
-
             formMessageAsk.style.height = '50px'
             formMessageAsk.style.border = '1px solid lightgrey'
             formMessageAsk.style.borderRadius = '10px'
@@ -91,13 +91,12 @@ async function loadMessages() {
         let formSendButton = document.createElement('button')
             formSendButton.style.width = '20%'
             formSendButton.style.marginLeft = '10%';
-
-            formSendButton.textContent = 'Envoyer'
             formSendButton.style.padding = '15px'
             formSendButton.style.color = 'black'
             formSendButton.style.backgroundColor = 'deepskyblue'
             formSendButton.style.borderRadius = '15px'
             formSendButton.style.border = 'none'
+            formSendButton.textContent = 'Envoyer'
 
             formMessageDiv.append(formMessageAsk, formSendButton)
 
@@ -116,6 +115,19 @@ async function loadMessages() {
 loadMessages()
 
 
+const postMethod = {
+    method: 'POST',
+    body: JSON.stringify(data)
+}
+
+async function postMessage(){
+
+
+    fetch(linkMsgApi, postMethod)
+        .then(response => response.json())
+        .then(datas => {
 
 
 
+        })
+}
